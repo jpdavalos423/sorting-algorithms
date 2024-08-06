@@ -20,8 +20,8 @@ export default function Home() {
         <div className="navbar-end"></div>
       </div>
 
-      <div className="container">
-        <div className="bar"></div>
+      <div className="container bg-gray-500 rounded p-5">
+        <div className="bar bg-white text-black px-5">5</div>
       </div>
     </>
   );
