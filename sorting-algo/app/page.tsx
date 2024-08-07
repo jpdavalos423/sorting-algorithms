@@ -1,6 +1,10 @@
-import Image from "next/image";
+"use client";
+import { useState } from "react";
+import SortGraph from "./components/SortGraph";
 
 export default function Home() {
+  const [array, setArray] = useState([50, 150, 100, 250, 200, 300]);
+
   return (
     <>
       <div className="navbar bg-base-100">
@@ -20,9 +24,7 @@ export default function Home() {
         <div className="navbar-end"></div>
       </div>
 
-      <div className="container bg-gray-500 rounded p-5">
-        <div className="bar bg-white text-black px-5">5</div>
-      </div>
+      <SortGraph array={array} />
     </>
   );
 }
