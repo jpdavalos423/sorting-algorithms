@@ -7,7 +7,7 @@ interface GraphArray {
 
 const SortGraph: React.FC<GraphArray> = ({ array }) => {
   return (
-    <div className="container flex justify-center items-end bg-gray-500 rounded p-5 mx-auto">
+    <div className=" flex justify-center items-end bg-gray-500 rounded py-5">
       {array.map((value: any, index: any) => (
         <div
           key={index}

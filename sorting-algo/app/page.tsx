@@ -2,7 +2,11 @@
 import { useState } from "react";
 import SortGraph from "./components/SortGraph";
 import NavBar from "./components/NavBar";
-import { bubbleSort, selectionSort } from "./utils/sortingAlgorithms";
+import {
+  bubbleSort,
+  mergeSort,
+  selectionSort,
+} from "./utils/sortingAlgorithms";
 import { shuffleData } from "./utils/shuffleData";
 
 export default function Home() {
@@ -19,6 +23,9 @@ export default function Home() {
   const handleSelectionSort = () => {
     selectionSort(array, setArray);
   };
+  const handleMergeSort = () => {
+    mergeSort(array, setArray);
+  };
 
   return (
     <>
@@ -28,11 +35,14 @@ export default function Home() {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
+            <li onClick={handleBubbleSort}>
+              <a>Bubble Sort</a>
+            </li>
             <li onClick={handleSelectionSort}>
               <a>Selection Sort</a>
             </li>
-            <li onClick={handleBubbleSort}>
-              <a>Bubble Sort</a>
+            <li onClick={handleMergeSort}>
+              <a>Merge Sort</a>
             </li>
           </ul>
         </div>
