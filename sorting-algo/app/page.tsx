@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import SortGraph from "./components/SortGraph";
+import NavBar from "./components/NavBar";
 import { bubbleSort, selectionSort } from "./utils/sortingAlgorithms";
 import { shuffleData } from "./utils/shuffleData";
 
@@ -41,6 +42,7 @@ export default function Home() {
           </a>
         </div>
       </div>
+      {/* <NavBar array={array} setArray={setArray} handleShuffle={handleShuffle} /> */}
 
       <SortGraph array={array} />
     </>
